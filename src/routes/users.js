@@ -9,7 +9,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/users/profile:
+ * /users/profile:
  *   get:
  *     summary: Get user profile
  *     tags: [Users]
@@ -32,7 +32,7 @@ router.get('/profile', protect, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/users/profile:
+ * /users/profile:
  *   put:
  *     summary: Update user profile
  *     tags: [Users]
@@ -80,7 +80,7 @@ router.put('/profile', protect, validateProfileUpdate, asyncHandler(async (req, 
 
 /**
  * @swagger
- * /api/users:
+ * /users:
  *   get:
  *     summary: Get all users (Admin only)
  *     tags: [Users]
@@ -143,7 +143,7 @@ router.get('/', protect, admin, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/users/{id}:
+ * /users/{id}:
  *   get:
  *     summary: Get user by ID (Admin only)
  *     tags: [Users]
@@ -177,7 +177,7 @@ router.get('/:id', protect, admin, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/users/{id}:
+ * /users/{id}:
  *   put:
  *     summary: Update user (Admin only)
  *     tags: [Users]
@@ -236,7 +236,7 @@ router.put('/:id', protect, admin, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/users/{id}:
+ * /users/{id}:
  *   delete:
  *     summary: Delete user (Admin only)
  *     tags: [Users]

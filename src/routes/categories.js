@@ -8,7 +8,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/categories:
+ * /categories:
  *   get:
  *     summary: Get all categories
  *     tags: [Categories]
@@ -29,7 +29,7 @@ router.get('/', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/categories/with-counts:
+ * /categories/with-counts:
  *   get:
  *     summary: Get categories with product counts
  *     tags: [Categories]
@@ -48,7 +48,7 @@ router.get('/with-counts', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/categories/{id}:
+ * /categories/{id}:
  *   get:
  *     summary: Get category by ID
  *     tags: [Categories]
@@ -81,7 +81,7 @@ router.get('/:id', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/categories:
+ * /categories:
  *   post:
  *     summary: Create new category (Admin only)
  *     tags: [Categories]
@@ -123,7 +123,7 @@ router.post('/', protect, admin, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/categories/{id}:
+ * /categories/{id}:
  *   put:
  *     summary: Update category (Admin only)
  *     tags: [Categories]
@@ -179,7 +179,7 @@ router.put('/:id', protect, admin, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/categories/{id}:
+ * /categories/{id}:
  *   delete:
  *     summary: Delete category (Admin only)
  *     tags: [Categories]

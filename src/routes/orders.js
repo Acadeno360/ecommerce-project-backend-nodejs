@@ -11,7 +11,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/orders:
+ * /orders:
  *   get:
  *     summary: Get user orders (Customer) or all orders (Admin)
  *     tags: [Orders]
@@ -76,7 +76,7 @@ router.get('/', protect, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/orders/{id}:
+ * /orders/{id}:
  *   get:
  *     summary: Get order by ID
  *     tags: [Orders]
@@ -118,7 +118,7 @@ router.get('/:id', protect, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/orders:
+ * /orders:
  *   post:
  *     summary: Create new order (Customer only)
  *     tags: [Orders]
@@ -205,7 +205,7 @@ router.post('/', protect, customer, validateOrder, asyncHandler(async (req, res)
 
 /**
  * @swagger
- * /api/orders/{id}/cancel:
+ * /orders/{id}/cancel:
  *   post:
  *     summary: Cancel order (Customer or Admin)
  *     tags: [Orders]
@@ -260,7 +260,7 @@ router.post('/:id/cancel', protect, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/orders/{id}/status:
+ * /orders/{id}/status:
  *   put:
  *     summary: Update order status (Admin only)
  *     tags: [Orders]

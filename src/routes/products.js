@@ -9,7 +9,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/products:
+ * /products:
  *   get:
  *     summary: Get all products
  *     tags: [Products]
@@ -131,7 +131,7 @@ router.get('/', optionalAuth, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/products/featured:
+ * /products/featured:
  *   get:
  *     summary: Get featured products
  *     tags: [Products]
@@ -158,7 +158,7 @@ router.get('/featured', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/products/{id}:
+ * /products/{id}:
  *   get:
  *     summary: Get product by ID
  *     tags: [Products]
@@ -198,7 +198,7 @@ router.get('/:id', optionalAuth, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/products:
+ * /products:
  *   post:
  *     summary: Create new product (Admin only)
  *     tags: [Products]
@@ -227,7 +227,7 @@ router.post('/', protect, admin, validateProduct, asyncHandler(async (req, res) 
 
 /**
  * @swagger
- * /api/products/{id}:
+ * /products/{id}:
  *   put:
  *     summary: Update product (Admin only)
  *     tags: [Products]
@@ -270,7 +270,7 @@ router.put('/:id', protect, admin, validateProduct, asyncHandler(async (req, res
 
 /**
  * @swagger
- * /api/products/{id}:
+ * /products/{id}:
  *   delete:
  *     summary: Delete product (Admin only)
  *     tags: [Products]

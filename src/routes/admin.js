@@ -15,7 +15,7 @@ router.use(protect, admin);
 
 /**
  * @swagger
- * /api/admin/dashboard:
+ * /admin/dashboard:
  *   get:
  *     summary: Get admin dashboard statistics
  *     tags: [Admin]
@@ -115,7 +115,7 @@ router.get('/dashboard', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/admin/analytics:
+ * /admin/analytics:
  *   get:
  *     summary: Get detailed analytics
  *     tags: [Admin]
@@ -246,7 +246,7 @@ router.get('/analytics', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/admin/users/statistics:
+ * /admin/users/statistics:
  *   get:
  *     summary: Get user statistics
  *     tags: [Admin]
@@ -291,7 +291,7 @@ router.get('/users/statistics', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/admin/orders/statistics:
+ * /admin/orders/statistics:
  *   get:
  *     summary: Get order statistics
  *     tags: [Admin]
@@ -342,7 +342,7 @@ router.get('/orders/statistics', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/admin/products/statistics:
+ * /admin/products/statistics:
  *   get:
  *     summary: Get product statistics
  *     tags: [Admin]

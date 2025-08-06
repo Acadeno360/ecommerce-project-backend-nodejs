@@ -15,8 +15,8 @@ const options = {
     servers: [
       {
         url: process.env.NODE_ENV === 'production' 
-          ? 'https://your-production-domain.com/api' 
-          : 'http://localhost:3000/api',
+          ? 'https://your-production-domain.com' 
+          : 'http://localhost:5555/api',
         description: process.env.NODE_ENV === 'production' ? 'Production server' : 'Development server'
       }
     ],

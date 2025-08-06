@@ -14,7 +14,7 @@ router.use(protect, customer);
 
 /**
  * @swagger
- * /api/customers/dashboard:
+ * /customers/dashboard:
  *   get:
  *     summary: Get customer dashboard
  *     tags: [Customers]
@@ -101,7 +101,7 @@ router.get('/dashboard', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/customers/profile:
+ * /customers/profile:
  *   get:
  *     summary: Get customer profile
  *     tags: [Customers]
@@ -122,7 +122,7 @@ router.get('/profile', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/customers/profile:
+ * /customers/profile:
  *   put:
  *     summary: Update customer profile
  *     tags: [Customers]
@@ -164,7 +164,7 @@ router.put('/profile', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/customers/orders:
+ * /customers/orders:
  *   get:
  *     summary: Get customer orders
  *     tags: [Customers]
@@ -222,7 +222,7 @@ router.get('/orders', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/customers/reviews:
+ * /customers/reviews:
  *   get:
  *     summary: Get customer reviews
  *     tags: [Customers]
@@ -270,7 +270,7 @@ router.get('/reviews', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/customers/wishlist:
+ * /customers/wishlist:
  *   get:
  *     summary: Get customer wishlist (placeholder for future implementation)
  *     tags: [Customers]
@@ -291,7 +291,7 @@ router.get('/wishlist', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/customers/addresses:
+ * /customers/addresses:
  *   get:
  *     summary: Get customer addresses
  *     tags: [Customers]
@@ -312,7 +312,7 @@ router.get('/addresses', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/customers/addresses:
+ * /customers/addresses:
  *   post:
  *     summary: Add customer address
  *     tags: [Customers]

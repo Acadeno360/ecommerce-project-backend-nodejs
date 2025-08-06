@@ -12,7 +12,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/auth/register:
+ * /auth/register:
  *   post:
  *     summary: Register a new user
  *     tags: [Authentication]
@@ -100,7 +100,7 @@ router.post('/register', validateRegister, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/auth/login:
+ * /auth/login:
  *   post:
  *     summary: Login user
  *     tags: [Authentication]
@@ -182,7 +182,7 @@ router.post('/login', validateLogin, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/auth/me:
+ * /auth/me:
  *   get:
  *     summary: Get current user profile
  *     tags: [Authentication]
@@ -215,7 +215,7 @@ router.get('/me', protect, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/auth/forgot-password:
+ * /auth/forgot-password:
  *   post:
  *     summary: Forgot password
  *     tags: [Authentication]
@@ -279,7 +279,7 @@ router.post('/forgot-password', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/auth/reset-password/{resetToken}:
+ * /auth/reset-password/{resetToken}:
  *   put:
  *     summary: Reset password
  *     tags: [Authentication]
@@ -343,7 +343,7 @@ router.put('/reset-password/:resetToken', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/auth/logout:
+ * /auth/logout:
  *   post:
  *     summary: Logout user
  *     tags: [Authentication]

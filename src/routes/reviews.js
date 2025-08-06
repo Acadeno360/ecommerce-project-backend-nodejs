@@ -10,7 +10,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/reviews/product/{productId}:
+ * /reviews/product/{productId}:
  *   get:
  *     summary: Get reviews for a product
  *     tags: [Reviews]
@@ -56,7 +56,7 @@ router.get('/product/:productId', asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/reviews/my:
+ * /reviews/my:
  *   get:
  *     summary: Get user's reviews (Customer only)
  *     tags: [Reviews]
@@ -99,7 +99,7 @@ router.get('/my', protect, customer, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/reviews:
+ * /reviews:
  *   post:
  *     summary: Create new review (Customer only)
  *     tags: [Reviews]
@@ -175,7 +175,7 @@ router.post('/', protect, customer, validateReview, asyncHandler(async (req, res
 
 /**
  * @swagger
- * /api/reviews/{id}:
+ * /reviews/{id}:
  *   put:
  *     summary: Update review (Customer only)
  *     tags: [Reviews]
@@ -240,7 +240,7 @@ router.put('/:id', protect, customer, validateReview, asyncHandler(async (req, r
 
 /**
  * @swagger
- * /api/reviews/{id}:
+ * /reviews/{id}:
  *   delete:
  *     summary: Delete review (Customer or Admin)
  *     tags: [Reviews]
@@ -282,7 +282,7 @@ router.delete('/:id', protect, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/reviews/{id}/helpful:
+ * /reviews/{id}/helpful:
  *   post:
  *     summary: Mark review as helpful/unhelpful
  *     tags: [Reviews]
@@ -332,7 +332,7 @@ router.post('/:id/helpful', protect, asyncHandler(async (req, res) => {
 
 /**
  * @swagger
- * /api/reviews/{id}/report:
+ * /reviews/{id}/report:
  *   post:
  *     summary: Report review
  *     tags: [Reviews]
