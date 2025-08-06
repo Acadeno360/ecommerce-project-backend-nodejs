@@ -70,6 +70,11 @@ app.get('/health', (req, res) => {
 // Swagger Documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
+//TEST
+app.get('/', (req, res) => {
+  res.send('API RUNNING SUCCESSFULLY...');
+});
+
 // API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
